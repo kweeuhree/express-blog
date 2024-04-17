@@ -5,11 +5,9 @@ const bodyParser = require('body-parser');
 const port = 3000;
 
 
-
 //add middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
 
 
 //add routes
@@ -20,13 +18,6 @@ const usersRouter = require('./routes/users');
 app.use('/api/comments', commentsRouter);
 app.use('/api/posts', postsRouter);
 app.use('/api/users', usersRouter);
-
-
-
-
-
-
-
 
 
 

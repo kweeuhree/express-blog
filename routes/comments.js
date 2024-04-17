@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
     }
 
     if(!newComment.username || !newComment.comment) {
-        res.status(400).json({ msg: `Make sure to include username and a comment` });
+        return res.status(400).json({ msg: `Make sure to include username and a comment` });
     }
 
     comments.push(newComment);
@@ -64,12 +64,6 @@ router.delete('/:id', (req, res) => {
         res.status(400).json({ msg: `Comment not found with id of ${req.params.id}` })
     }
 })
-
-
-
-
-
-
 
 
 
